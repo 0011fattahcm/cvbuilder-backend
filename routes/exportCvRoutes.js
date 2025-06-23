@@ -803,7 +803,7 @@ worksheet.getCell('A13').font = { name: 'Century', size: 10 };
   
   if (type === 'pdf') {
     const pdfPath = excelPath.replace('.xlsx', '.pdf');
-    const command = `"C:\\Program Files\\LibreOffice\\program\\soffice.exe" --headless --convert-to pdf --outdir "${exportsDir}" "${excelPath}"`;
+    const command = `libreoffice --headless --convert-to pdf --outdir "${exportsDir}" "${excelPath}"`;
   
     exec(command, async (error) => {
       if (error) {
