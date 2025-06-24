@@ -7,6 +7,7 @@ const pendidikanSchema = new mongoose.Schema({
 });
 
 const pekerjaanSchema = new mongoose.Schema({
+  isCurrentJob: { type: Boolean, default: false },
   namaPerusahaan: String,
   rincianKerja: String,
   masaKerja: String
